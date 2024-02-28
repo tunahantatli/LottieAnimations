@@ -2,7 +2,7 @@ import React from 'react'
 import { Image } from 'react-native'
 import { Text, View } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper'
-
+import LottieView from 'lottie-react-native';
 export default function OnBoarding() {
     return (
         <View className="flex-1 items-center justify-center bg-white">
@@ -12,8 +12,9 @@ export default function OnBoarding() {
                     {
                         backgroundColor: '#fff',
                         image: 
-                           <Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
-                                style={{ width: 200, height: 200 }} />
+                           <View>
+                              <LottieView source={require('../assets/animations/boost.json')} autoPlay loop />
+                           </View>
                         ,
                         title: 'EISYTECH APP TRYING',
                         subtitle: 'For eisytech mobile app development',
