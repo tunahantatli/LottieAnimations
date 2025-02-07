@@ -12,16 +12,16 @@ export default function OnBoarding() {
 
     const doneButton = ({ ...props }) => {
         return (
-            <TouchableOpacity className="p-5 bg-black  rounded-full mr-2" {...props}>
-                <Text className='text-white'>Bitti</Text>
+            <TouchableOpacity className="p-5 bg-transparent mr-2" {...props}>
+                <Text className='text-purple-600'>Bitti</Text>
             </TouchableOpacity>
         )
     }
 
     const nextButton = ({ ...props }) => {
         return (
-            <TouchableOpacity className="p-5 bg-black  rounded-full mr-2" {...props}>
-                <Text className="text-white">Sıradaki</Text>
+            <TouchableOpacity className="p-5 bg-transparent mr-2" {...props}>
+                <Text className="text-black">Sıradaki</Text>
             </TouchableOpacity>
         )
     }
