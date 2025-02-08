@@ -1,5 +1,5 @@
 {
-  "name": "lottieanimations",
+  "name": "eisytech",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.12",
     "@react-navigation/native-stack": "^6.9.20",
+    "eas-cli": "^15.0.6",
     "expo": "^52.0.9",
     "expo-status-bar": "~2.0.0",
     "firebase": "^11.2.0",

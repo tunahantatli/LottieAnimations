@@ -1,9 +1,10 @@
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacity, Image } from 'react-native'
 import { Text, View } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper'
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
+
 export default function OnBoarding() {
     const navigation = useNavigation();
     const handleDone = () => {
@@ -33,6 +34,7 @@ export default function OnBoarding() {
             </TouchableOpacity>
         )
     }
+
     return (
         <View className="flex-1 justify-center">
             <Onboarding
@@ -46,37 +48,34 @@ export default function OnBoarding() {
                     {
                         backgroundColor: 'white',
                         image:
-                            <View >
-                                <LottieView style={{ 'width': 300, 'height': 400 }} source={require('../assets/animations/farmer.json')} autoPlay loop />
+                            <View>
+                                <LottieView style={{ width: 300, height: 400 }} source={require('../assets/animations/farmer.json')} autoPlay loop />
                             </View>
                         ,
-                        title: 'EISYTECH APP TRY Vol-1',
-                        subtitle: 'For eisytech mobile app development',
-                        titleStyles: { color: 'red' },
+                        title: <Image source={require('../assets/elog.png')} style={{ width: 200, height: 50, resizeMode: 'contain' }} />,
+                        subtitle: 'Sulamayı, hava durumunu ve sensör verilerini anlık kontrol et.',
                         subTitleStyles: { color: 'darkgreen' }
                     },
                     {
                         backgroundColor: 'white',
                         image:
-                            <View >
-                                <LottieView style={{ 'width': 300, 'height': 400 }} source={require('../assets/animations/chart.json')} autoPlay loop />
+                            <View>
+                                <LottieView style={{ width: 300, height: 400 }} source={require('../assets/animations/chart.json')} autoPlay loop />
                             </View>
                         ,
-                        title: 'EISYTECH APP TRY Vol-1',
-                        subtitle: 'For eisytech mobile app development',
-                        titleStyles: { color: 'red' },
+                        title: <Image source={require('../assets/elog.png')} style={{ width: 200, height: 50, resizeMode: 'contain' }} />,
+                        subtitle: 'Verimli Tarım İçin Akıllı Takip',
                         subTitleStyles: { color: 'darkgreen' }
                     },
                     {
                         backgroundColor: '#fff',
                         image:
-                            <View >
-                                <LottieView style={{ 'width': 300, 'height': 400 }} source={require('../assets/animations/boost.json')} autoPlay loop />
+                            <View>
+                                <LottieView style={{ width: 300, height: 400 }} source={require('../assets/animations/boost.json')} autoPlay loop />
                             </View>
                         ,
-                        title: 'EISYTECH APP TRY Vol-1',
-                        subtitle: 'For eisytech mobile app development',
-                        titleStyles: { color: 'red' },
+                        title: <Image source={require('../assets/elog.png')} style={{ width: 200, height: 50, resizeMode: 'contain' }} />,
+                        subtitle: 'Akıllı teknolojiyle daha hızlı, daha verimli ve daha kolay tarım!',
                         subTitleStyles: { color: 'darkgreen' }
                     },
                 ]}
