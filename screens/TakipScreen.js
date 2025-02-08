@@ -29,6 +29,7 @@ const TakipScreen = () => {
         <Valve valveId="Vana1" />
         <Valve valveId="Vana2" />
         <Valve valveId="Vana3" />
+        <Valve valveId="Vana4" />
       </View>
       <View className="flex flex-row items-center justify-end p-4 mt-2 mb-8">
         <TouchableOpacity onPress={rstButton} className="bg-black p-3 rounded-full w-28 justify-center items-center mb-4">

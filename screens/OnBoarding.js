@@ -74,7 +74,7 @@ export default function OnBoarding() {
                                 <LottieView style={{ width: 300, height: 400 }} source={require('../assets/animations/boost.json')} autoPlay loop />
                             </View>
                         ,
-                        title: <Image source={require('../assets/elog.png')} style={{ width: 200, height: 50, resizeMode: 'contain' }} />,
+                        title: <Image source={require('../assets/elog.png')} style={{ width: 200, resizeMode: 'contain' }} />,
                         subtitle: 'Akıllı teknolojiyle daha hızlı, daha verimli ve daha kolay tarım!',
                         subTitleStyles: { color: 'darkgreen' }
                     },

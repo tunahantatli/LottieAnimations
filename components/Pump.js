@@ -34,6 +34,7 @@ const Pump = ({ pumpId }) => {
 
     const setTimedOperation = () => {
         const timeInMilliseconds = parseInt(timeToStayOpen) * 60000; // Dakika olarak
+        
         if (timeInMilliseconds > 0) {
             update(ref(db, `pumps/${pumpId}`), {
                 status: "1",
@@ -46,6 +47,8 @@ const Pump = ({ pumpId }) => {
             });
         }
     };
+
+    const timeToClose = new Date(Date.now() + parseInt(timeToStayOpen) * 60000).toLocaleTimeString();
 
     return (
         <View className="w-11/12 p-4 rounded-lg bg-white shadow-md self-center mb-12">
@@ -70,7 +73,7 @@ const Pump = ({ pumpId }) => {
             {timedOperationStatus ? (
                 <View className="mt-4">
                     <Text className="font-semibold text-lg">Zamanlı Açma Durumu:</Text>
-                    <Text className="font-normal text-lg">Pompa {timeToStayOpen} dakika süresince açık kalacak ve şu an çalışıyor.</Text>
+                    <Text className="font-normal text-lg">Pompa <Text className="text-blue-500 font-semibold">{timeToClose}</Text> 'da kapanacak ve şu an çalışıyor.</Text>
                 </View>
             ) : (
                 <View className="mt-4">
@@ -84,9 +87,9 @@ const Pump = ({ pumpId }) => {
                     />
                     <TouchableOpacity
                         onPress={setTimedOperation}
-                        className="mt-2 px-4 py-2 bg-blue-500 rounded text-white"
+                        className="mt-2 px-[86px] py-2 bg-blue-500 rounded text-white flex flex-row self-center"
                     >
-                        <Text className="text-white">Zamanla Aç</Text>
+                        <Text className="text-white text-lg">Zamanla Aç</Text>
                     </TouchableOpacity>
                 </View>
             )}
